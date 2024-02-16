@@ -4,10 +4,13 @@
   "description": "",
   "type": "module",
   "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "dev": "tsx watch src/http/server.ts",
-    "start": "ts-node src/http/server.ts",
-    "build": "tsc"
+    "build": "tsup src",
+    "start": "node dist/http/server.cjs"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +19,7 @@
     "@types/node": "^20.11.17",
     "prisma": "^5.9.1",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
